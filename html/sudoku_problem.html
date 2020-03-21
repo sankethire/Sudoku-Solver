@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta id="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Sudoku Solver</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+
+<style>
+	.cell {
+		height: 7rem;
+		width: 7rem;
+	}
+
+	.dimtable {
+		height: 63rem;
+		width: 63rem;
+		margin: auto;
+	}
+
+	.topborder {
+		border-top: 0.5rem solid black;
+	}
+
+	.bottomborder {
+		border-bottom: 0.5rem solid black;
+	}
+
+	.leftborder {
+		border-left: 0.5rem solid black;
+	}
+
+	.rightborder {
+		border-right: 0.5rem solid black;
+	}
+
+	.graybottom {
+		border-bottom: 0.1rem solid gray;
+	}
+
+	.grayright {
+		border-right: 0.1rem solid gray;
+	}
+
+	input {
+		width: 100%;
+		height: 100%;
+		box-sizing: border-box;
+		text-align: center;
+		font-size: xx-large;
+		font-weight: bold;
+	}
+</style>
+
+<body>
+	<div class="container" style="padding-top: 10rem;">
+		<h1>
+			<center>Sudoku Solver</center>
+			<br>
+		</h1>
+
+
+		<form action="/">
+			<table class="dimtable">
+				<tr class="graybottom">
+					<td class="cell leftborder topborder grayright"><input type="number" min="1" max="9" id="c00"></td>
+					<td class="cell topborder grayright"><input type="number" min="1" max="9" id="c01"></td>
+					<td class="cell topborder rightborder"><input type="number" min="1" max="9" id="c02"></td>
+					<td class="cell topborder grayright"><input type="number" min="1" max="9" id="c03"></td>
+					<td class="cell topborder grayright"><input type="number" min="1" max="9" id="c04"></td>
+					<td class="cell topborder rightborder"><input type="number" min="1" max="9" id="c05"></td>
+					<td class="cell topborder grayright"><input type="number" min="1" max="9" id="c06"></td>
+					<td class="cell topborder grayright"><input type="number" min="1" max="9" id="c07"></td>
+					<td class="cell rightborder topborder"><input type="number" min="1" max="9" id="c08"></td>
+				</tr>
+	
+				<tr class="graybottom">
+					<td class="cell leftborder grayright"><input type="number" min="1" max="9" id="c10"></td>
+					<td class="cell grayright"><input type="number" min="1" max="9" id="c11"></td>
+					<td class="cell rightborder"><input type="number" min="1" max="9" id="c12"></td>
+					<td class="cell grayright"><input type="number" min="1" max="9" id="c13"></td>
+					<td class="cell grayright"><input type="number" min="1" max="9" id="c14"></td>
+					<td class="cell rightborder"><input type="number" min="1" max="9" id="c15"></td>
+					<td class="cell grayright"><input type="number" min="1" max="9" id="c16"></td>
+					<td class="cell grayright"><input type="number" min="1" max="9" id="c17"></td>
+					<td class="cell rightborder"><input type="number" min="1" max="9" id="c18"></td>
+				</tr>
+	
+				<tr>
+					<td class="cell leftborder bottomborder grayright"><input type="number" min="1" max="9" id="c20"></td>
+					<td class="cell bottomborder grayright"><input type="number" min="1" max="9" id="c21"></td>
+					<td class="cell bottomborder rightborder"><input type="number" min="1" max="9" id="c22"></td>
+					<td class="cell bottomborder grayright"><input type="number" min="1" max="9" id="c23"></td>
+					<td class="cell bottomborder grayright"><input type="number" min="1" max="9" id="c24"></td>
+					<td class="cell bottomborder rightborder"><input type="number" min="1" max="9" id="c25"></td>
+					<td class="cell bottomborder grayright"><input type="number" min="1" max="9" id="c26"></td>
+					<td class="cell bottomborder grayright"><input type="number" min="1" max="9" id="c27"></td>
+					<td class="cell rightborder bottomborder"><input type="number" min="1" max="9" id="c28"></td>
+				</tr>
+	
+				<tr class="graybottom">
+					<td class="cell leftborder grayright"><input type="number" min="1" max="9" id="c30"></td>
+					<td class="cell grayright"><input type="number" min="1" max="9" id="c31"></td>
+					<td class="cell rightborder"><input type="number" min="1" max="9" id="c32"></td>
+					<td class="cell grayright"><input type="number" min="1" max="9" id="c33"></td>
+					<td class="cell grayright"><input type="number" min="1" max="9" id="c34"></td>
+					<td class="cell rightborder"><input type="number" min="1" max="9" id="c35"></td>
+					<td class="cell grayright"><input type="number" min="1" max="9" id="c36"></td>
+					<td class="cell grayright"><input type="number" min="1" max="9" id="c37"></td>
+					<td class="cell rightborder"><input type="number" min="1" max="9" id="c38"></td>
+				</tr>
+	
+				<tr class="graybottom">
+					<td class="cell leftborder grayright"><input type="number" min="1" max="9" id="c40"></td>
+					<td class="cell grayright"><input type="number" min="1" max="9" id="c41"></td>
+					<td class="cell rightborder"><input type="number" min="1" max="9" id="c42"></td>
+					<td class="cell grayright"><input type="number" min="1" max="9" id="c43"></td>
+					<td class="cell grayright"><input type="number" min="1" max="9" id="c44"></td>
+					<td class="cell rightborder"><input type="number" min="1" max="9" id="c45"></td>
+					<td class="cell grayright"><input type="number" min="1" max="9" id="c46"></td>
+					<td class="cell grayright"><input type="number" min="1" max="9" id="c47"></td>
+					<td class="cell rightborder"><input type="number" min="1" max="9" id="c48"></td>
+				</tr>
+	
+				<tr>
+					<td class="cell leftborder bottomborder grayright"><input type="number" min="1" max="9" id="c50"></td>
+					<td class="cell bottomborder grayright"><input type="number" min="1" max="9" id="c51"></td>
+					<td class="cell bottomborder rightborder"><input type="number" min="1" max="9" id="c52"></td>
+					<td class="cell bottomborder grayright"><input type="number" min="1" max="9" id="c53"></td>
+					<td class="cell bottomborder grayright"><input type="number" min="1" max="9" id="c54"></td>
+					<td class="cell bottomborder rightborder"><input type="number" min="1" max="9" id="c55"></td>
+					<td class="cell bottomborder grayright"><input type="number" min="1" max="9" id="c56"></td>
+					<td class="cell bottomborder grayright"><input type="number" min="1" max="9" id="c57"></td>
+					<td class="cell rightborder bottomborder"><input type="number" min="1" max="9" id="c58"></td>
+				</tr>
+	
+				<tr class="graybottom">
+					<td class="cell leftborder grayright"><input type="number" min="1" max="9" id="c60"></td>
+					<td class="cell grayright"><input type="number" min="1" max="9" id="c61"></td>
+					<td class="cell rightborder"><input type="number" min="1" max="9" id="c62"></td>
+					<td class="cell grayright"><input type="number" min="1" max="9" id="c63"></td>
+					<td class="cell grayright"><input type="number" min="1" max="9" id="c64"></td>
+					<td class="cell rightborder"><input type="number" min="1" max="9" id="c65"></td>
+					<td class="cell grayright"><input type="number" min="1" max="9" id="c66"></td>
+					<td class="cell grayright"><input type="number" min="1" max="9" id="c67"></td>
+					<td class="cell rightborder"><input type="number" min="1" max="9" id="c68"></td>
+				</tr>
+	
+				<tr class="graybottom">
+					<td class="cell leftborder grayright"><input type="number" min="1" max="9" id="c70"></td>
+					<td class="cell grayright"><input type="number" min="1" max="9" id="c71"></td>
+					<td class="cell rightborder"><input type="number" min="1" max="9" id="c72"></td>
+					<td class="cell grayright"><input type="number" min="1" max="9" id="c73"></td>
+					<td class="cell grayright"><input type="number" min="1" max="9" id="c74"></td>
+					<td class="cell rightborder"><input type="number" min="1" max="9" id="c75"></td>
+					<td class="cell grayright"><input type="number" min="1" max="9" id="c76"></td>
+					<td class="cell grayright"><input type="number" min="1" max="9" id="c77"></td>
+					<td class="cell rightborder"><input type="number" min="1" max="9" id="c78"></td>
+				</tr>
+	
+				<tr>
+					<td class="cell leftborder bottomborder grayright"><input type="number" min="1" max="9" id="c80"></td>
+					<td class="cell bottomborder grayright"><input type="number" min="1" max="9" id="c81"></td>
+					<td class="cell bottomborder rightborder"><input type="number" min="1" max="9" id="c82"></td>
+					<td class="cell bottomborder grayright"><input type="number" min="1" max="9" id="c83"></td>
+					<td class="cell bottomborder grayright"><input type="number" min="1" max="9" id="c84"></td>
+					<td class="cell bottomborder rightborder"><input type="number" min="1" max="9" id="c85"></td>
+					<td class="cell bottomborder grayright"><input type="number" min="1" max="9" id="c86"></td>
+					<td class="cell bottomborder grayright"><input type="number" min="1" max="9" id="c87"></td>
+					<td class="cell rightborder bottomborder"><input type="number" min="1" max="9" id="c88"></td>
+				</tr>
+			</table>
+			<br>
+			<center>
+				<button type="button" class="btn btn-primary" onclick="main();">Set the Problem</button>
+			</center>
+
+		<script>
+			const _board = [
+				['.', '9', '.', '.', '4', '2', '1', '3', '6'],
+				['.', '.', '.', '9', '6', '.', '4', '8', '5'],
+				['.', '.', '.', '5', '8', '1', '.', '.', '.'],
+				['.', '.', '4', '.', '.', '.', '.', '.', '.'],
+				['5', '1', '7', '2', '.', '.', '9', '.', '.'],
+				['6', '.', '2', '.', '.', '.', '3', '7', '.'],
+				['1', '.', '.', '8', '.', '4', '.', '2', '.'],
+				['7', '.', '6', '.', '.', '.', '8', '1', '.'],
+				['3', '.', '.', '.', '9', '.', '.', '.', '.'],
+			];
+			function main() {
+				solve_sudoku(_board);
+				console.log(_board);
+			}
+
+			function checkValid(board, row, col, k) {
+				for (let i = 0; i < 9; i++) {
+					const m = 3 * Math.floor(row / 3) + Math.floor(i / 3);
+					const n = 3 * Math.floor(col / 3) + i % 3;
+					if (board[row][i] == k || board[i][col] == k || board[m][n] == k) {
+						return false;
+					}
+				}
+				return true;
+			}
+
+
+			function solve_sudoku(data) {
+				for (let i = 0; i < 9; i++) {
+					for (let j = 0; j < 9; j++) {
+						if (data[i][j] == '.') {
+							for (let k = 1; k <= 9; k++) {
+								if (checkValid(data, i, j, k)) {
+									data[i][j] = k.toString();
+									if (solve_sudoku(data)) {
+										return true;
+									} 
+									else {
+										data[i][j] = '.';
+									}
+								}
+						}
+						return false;
+						}
+					}
+				}
+				return true;
+			}
+		</script>
+
+		</form>
+	</div>	
+</body>
+
+</html>
