@@ -52,146 +52,246 @@
 		font-size: xx-large;
 		font-weight: bold;
 	}
+
+	p {
+		color: whitesmoke;
+	}
+
+	body {
+		background: url('https://user-images.githubusercontent.com/26035692/77241528-41ac1400-6c19-11ea-8ca9-283c071b6996.png') no-repeat center center fixed;
+        background-size: cover;  
+        -webkit-background-size: cover;
+        -moz-background-size: cover;  
+        -o-background-size: cover; 
+        margin: 0; 
+        padding: 0;
+        /* overflow: hidden; */
+	}
+
+	.hstyle {
+		font-weight: bolder;
+		color: blanchedalmond;
+		font-family:Arial, Helvetica, sans-serif ;
+	}
+
+	.txtoutline {
+		color: white;
+		text-shadow: -0.7px -0.7px 0 blanchedalmond, 0.7px -0.7px 0 blanchedalmond, -0.7px 0.7px 0 blanchedalmond, 0.7px 0.7px 0 blanchedalmond;
+		font-size: xx-large;
+	}
+
 </style>
 
 <body>
-	<div class="container" style="padding-top: 10rem;">
+	<div class="container" style="padding-top: 5rem;">
 		<h1>
-			<center>Sudoku Solver</center>
+			<center class="hstyle"><font size="6">Sudoku Solver</font></center>
 			<br>
 		</h1>
 
 
 		<form action="/">
-			<table class="dimtable">
+			<table class="dimtable arrow-nav">
 				<tr class="graybottom">
-					<td class="cell leftborder topborder grayright"><input type="number" min="1" max="9" id="c00"></td>
-					<td class="cell topborder grayright"><input type="number" min="1" max="9" id="c01"></td>
-					<td class="cell topborder rightborder"><input type="number" min="1" max="9" id="c02"></td>
-					<td class="cell topborder grayright"><input type="number" min="1" max="9" id="c03"></td>
-					<td class="cell topborder grayright"><input type="number" min="1" max="9" id="c04"></td>
-					<td class="cell topborder rightborder"><input type="number" min="1" max="9" id="c05"></td>
-					<td class="cell topborder grayright"><input type="number" min="1" max="9" id="c06"></td>
-					<td class="cell topborder grayright"><input type="number" min="1" max="9" id="c07"></td>
-					<td class="cell rightborder topborder"><input type="number" min="1" max="9" id="c08"></td>
+					<td class="cell leftborder topborder grayright"><input min="1" max="9" id="c00"></td>
+					<td class="cell topborder grayright"><input min="1" max="9" id="c01"></td>
+					<td class="cell topborder rightborder"><input min="1" max="9" id="c02"></td>
+					<td class="cell topborder grayright"><input min="1" max="9" id="c03"></td>
+					<td class="cell topborder grayright"><input min="1" max="9" id="c04"></td>
+					<td class="cell topborder rightborder"><input min="1" max="9" id="c05"></td>
+					<td class="cell topborder grayright"><input min="1" max="9" id="c06"></td>
+					<td class="cell topborder grayright"><input min="1" max="9" id="c07"></td>
+					<td class="cell rightborder topborder"><input min="1" max="9" id="c08"></td>
 				</tr>
 	
 				<tr class="graybottom">
-					<td class="cell leftborder grayright"><input type="number" min="1" max="9" id="c10"></td>
-					<td class="cell grayright"><input type="number" min="1" max="9" id="c11"></td>
-					<td class="cell rightborder"><input type="number" min="1" max="9" id="c12"></td>
-					<td class="cell grayright"><input type="number" min="1" max="9" id="c13"></td>
-					<td class="cell grayright"><input type="number" min="1" max="9" id="c14"></td>
-					<td class="cell rightborder"><input type="number" min="1" max="9" id="c15"></td>
-					<td class="cell grayright"><input type="number" min="1" max="9" id="c16"></td>
-					<td class="cell grayright"><input type="number" min="1" max="9" id="c17"></td>
-					<td class="cell rightborder"><input type="number" min="1" max="9" id="c18"></td>
+					<td class="cell leftborder grayright"><input min="1" max="9" id="c10"></td>
+					<td class="cell grayright"><input min="1" max="9" id="c11"></td>
+					<td class="cell rightborder"><input min="1" max="9" id="c12"></td>
+					<td class="cell grayright"><input min="1" max="9" id="c13"></td>
+					<td class="cell grayright"><input min="1" max="9" id="c14"></td>
+					<td class="cell rightborder"><input min="1" max="9" id="c15"></td>
+					<td class="cell grayright"><input min="1" max="9" id="c16"></td>
+					<td class="cell grayright"><input min="1" max="9" id="c17"></td>
+					<td class="cell rightborder"><input min="1" max="9" id="c18"></td>
 				</tr>
 	
 				<tr>
-					<td class="cell leftborder bottomborder grayright"><input type="number" min="1" max="9" id="c20"></td>
-					<td class="cell bottomborder grayright"><input type="number" min="1" max="9" id="c21"></td>
-					<td class="cell bottomborder rightborder"><input type="number" min="1" max="9" id="c22"></td>
-					<td class="cell bottomborder grayright"><input type="number" min="1" max="9" id="c23"></td>
-					<td class="cell bottomborder grayright"><input type="number" min="1" max="9" id="c24"></td>
-					<td class="cell bottomborder rightborder"><input type="number" min="1" max="9" id="c25"></td>
-					<td class="cell bottomborder grayright"><input type="number" min="1" max="9" id="c26"></td>
-					<td class="cell bottomborder grayright"><input type="number" min="1" max="9" id="c27"></td>
-					<td class="cell rightborder bottomborder"><input type="number" min="1" max="9" id="c28"></td>
+					<td class="cell leftborder bottomborder grayright"><input min="1" max="9" id="c20"></td>
+					<td class="cell bottomborder grayright"><input min="1" max="9" id="c21"></td>
+					<td class="cell bottomborder rightborder"><input min="1" max="9" id="c22"></td>
+					<td class="cell bottomborder grayright"><input min="1" max="9" id="c23"></td>
+					<td class="cell bottomborder grayright"><input min="1" max="9" id="c24"></td>
+					<td class="cell bottomborder rightborder"><input min="1" max="9" id="c25"></td>
+					<td class="cell bottomborder grayright"><input min="1" max="9" id="c26"></td>
+					<td class="cell bottomborder grayright"><input min="1" max="9" id="c27"></td>
+					<td class="cell rightborder bottomborder"><input min="1" max="9" id="c28"></td>
 				</tr>
 	
 				<tr class="graybottom">
-					<td class="cell leftborder grayright"><input type="number" min="1" max="9" id="c30"></td>
-					<td class="cell grayright"><input type="number" min="1" max="9" id="c31"></td>
-					<td class="cell rightborder"><input type="number" min="1" max="9" id="c32"></td>
-					<td class="cell grayright"><input type="number" min="1" max="9" id="c33"></td>
-					<td class="cell grayright"><input type="number" min="1" max="9" id="c34"></td>
-					<td class="cell rightborder"><input type="number" min="1" max="9" id="c35"></td>
-					<td class="cell grayright"><input type="number" min="1" max="9" id="c36"></td>
-					<td class="cell grayright"><input type="number" min="1" max="9" id="c37"></td>
-					<td class="cell rightborder"><input type="number" min="1" max="9" id="c38"></td>
+					<td class="cell leftborder grayright"><input min="1" max="9" id="c30"></td>
+					<td class="cell grayright"><input min="1" max="9" id="c31"></td>
+					<td class="cell rightborder"><input min="1" max="9" id="c32"></td>
+					<td class="cell grayright"><input min="1" max="9" id="c33"></td>
+					<td class="cell grayright"><input min="1" max="9" id="c34"></td>
+					<td class="cell rightborder"><input min="1" max="9" id="c35"></td>
+					<td class="cell grayright"><input min="1" max="9" id="c36"></td>
+					<td class="cell grayright"><input min="1" max="9" id="c37"></td>
+					<td class="cell rightborder"><input min="1" max="9" id="c38"></td>
 				</tr>
 	
 				<tr class="graybottom">
-					<td class="cell leftborder grayright"><input type="number" min="1" max="9" id="c40"></td>
-					<td class="cell grayright"><input type="number" min="1" max="9" id="c41"></td>
-					<td class="cell rightborder"><input type="number" min="1" max="9" id="c42"></td>
-					<td class="cell grayright"><input type="number" min="1" max="9" id="c43"></td>
-					<td class="cell grayright"><input type="number" min="1" max="9" id="c44"></td>
-					<td class="cell rightborder"><input type="number" min="1" max="9" id="c45"></td>
-					<td class="cell grayright"><input type="number" min="1" max="9" id="c46"></td>
-					<td class="cell grayright"><input type="number" min="1" max="9" id="c47"></td>
-					<td class="cell rightborder"><input type="number" min="1" max="9" id="c48"></td>
+					<td class="cell leftborder grayright"><input min="1" max="9" id="c40"></td>
+					<td class="cell grayright"><input min="1" max="9" id="c41"></td>
+					<td class="cell rightborder"><input min="1" max="9" id="c42"></td>
+					<td class="cell grayright"><input min="1" max="9" id="c43"></td>
+					<td class="cell grayright"><input min="1" max="9" id="c44"></td>
+					<td class="cell rightborder"><input min="1" max="9" id="c45"></td>
+					<td class="cell grayright"><input min="1" max="9" id="c46"></td>
+					<td class="cell grayright"><input min="1" max="9" id="c47"></td>
+					<td class="cell rightborder"><input min="1" max="9" id="c48"></td>
 				</tr>
 	
 				<tr>
-					<td class="cell leftborder bottomborder grayright"><input type="number" min="1" max="9" id="c50"></td>
-					<td class="cell bottomborder grayright"><input type="number" min="1" max="9" id="c51"></td>
-					<td class="cell bottomborder rightborder"><input type="number" min="1" max="9" id="c52"></td>
-					<td class="cell bottomborder grayright"><input type="number" min="1" max="9" id="c53"></td>
-					<td class="cell bottomborder grayright"><input type="number" min="1" max="9" id="c54"></td>
-					<td class="cell bottomborder rightborder"><input type="number" min="1" max="9" id="c55"></td>
-					<td class="cell bottomborder grayright"><input type="number" min="1" max="9" id="c56"></td>
-					<td class="cell bottomborder grayright"><input type="number" min="1" max="9" id="c57"></td>
-					<td class="cell rightborder bottomborder"><input type="number" min="1" max="9" id="c58"></td>
+					<td class="cell leftborder bottomborder grayright"><input min="1" max="9" id="c50"></td>
+					<td class="cell bottomborder grayright"><input min="1" max="9" id="c51"></td>
+					<td class="cell bottomborder rightborder"><input min="1" max="9" id="c52"></td>
+					<td class="cell bottomborder grayright"><input min="1" max="9" id="c53"></td>
+					<td class="cell bottomborder grayright"><input min="1" max="9" id="c54"></td>
+					<td class="cell bottomborder rightborder"><input min="1" max="9" id="c55"></td>
+					<td class="cell bottomborder grayright"><input min="1" max="9" id="c56"></td>
+					<td class="cell bottomborder grayright"><input min="1" max="9" id="c57"></td>
+					<td class="cell rightborder bottomborder"><input min="1" max="9" id="c58"></td>
 				</tr>
 	
 				<tr class="graybottom">
-					<td class="cell leftborder grayright"><input type="number" min="1" max="9" id="c60"></td>
-					<td class="cell grayright"><input type="number" min="1" max="9" id="c61"></td>
-					<td class="cell rightborder"><input type="number" min="1" max="9" id="c62"></td>
-					<td class="cell grayright"><input type="number" min="1" max="9" id="c63"></td>
-					<td class="cell grayright"><input type="number" min="1" max="9" id="c64"></td>
-					<td class="cell rightborder"><input type="number" min="1" max="9" id="c65"></td>
-					<td class="cell grayright"><input type="number" min="1" max="9" id="c66"></td>
-					<td class="cell grayright"><input type="number" min="1" max="9" id="c67"></td>
-					<td class="cell rightborder"><input type="number" min="1" max="9" id="c68"></td>
+					<td class="cell leftborder grayright"><input min="1" max="9" id="c60"></td>
+					<td class="cell grayright"><input min="1" max="9" id="c61"></td>
+					<td class="cell rightborder"><input min="1" max="9" id="c62"></td>
+					<td class="cell grayright"><input min="1" max="9" id="c63"></td>
+					<td class="cell grayright"><input min="1" max="9" id="c64"></td>
+					<td class="cell rightborder"><input min="1" max="9" id="c65"></td>
+					<td class="cell grayright"><input min="1" max="9" id="c66"></td>
+					<td class="cell grayright"><input min="1" max="9" id="c67"></td>
+					<td class="cell rightborder"><input min="1" max="9" id="c68"></td>
 				</tr>
 	
 				<tr class="graybottom">
-					<td class="cell leftborder grayright"><input type="number" min="1" max="9" id="c70"></td>
-					<td class="cell grayright"><input type="number" min="1" max="9" id="c71"></td>
-					<td class="cell rightborder"><input type="number" min="1" max="9" id="c72"></td>
-					<td class="cell grayright"><input type="number" min="1" max="9" id="c73"></td>
-					<td class="cell grayright"><input type="number" min="1" max="9" id="c74"></td>
-					<td class="cell rightborder"><input type="number" min="1" max="9" id="c75"></td>
-					<td class="cell grayright"><input type="number" min="1" max="9" id="c76"></td>
-					<td class="cell grayright"><input type="number" min="1" max="9" id="c77"></td>
-					<td class="cell rightborder"><input type="number" min="1" max="9" id="c78"></td>
+					<td class="cell leftborder grayright"><input min="1" max="9" id="c70"></td>
+					<td class="cell grayright"><input min="1" max="9" id="c71"></td>
+					<td class="cell rightborder"><input min="1" max="9" id="c72"></td>
+					<td class="cell grayright"><input min="1" max="9" id="c73"></td>
+					<td class="cell grayright"><input min="1" max="9" id="c74"></td>
+					<td class="cell rightborder"><input min="1" max="9" id="c75"></td>
+					<td class="cell grayright"><input min="1" max="9" id="c76"></td>
+					<td class="cell grayright"><input min="1" max="9" id="c77"></td>
+					<td class="cell rightborder"><input min="1" max="9" id="c78"></td>
 				</tr>
 	
 				<tr>
-					<td class="cell leftborder bottomborder grayright"><input type="number" min="1" max="9" id="c80"></td>
-					<td class="cell bottomborder grayright"><input type="number" min="1" max="9" id="c81"></td>
-					<td class="cell bottomborder rightborder"><input type="number" min="1" max="9" id="c82"></td>
-					<td class="cell bottomborder grayright"><input type="number" min="1" max="9" id="c83"></td>
-					<td class="cell bottomborder grayright"><input type="number" min="1" max="9" id="c84"></td>
-					<td class="cell bottomborder rightborder"><input type="number" min="1" max="9" id="c85"></td>
-					<td class="cell bottomborder grayright"><input type="number" min="1" max="9" id="c86"></td>
-					<td class="cell bottomborder grayright"><input type="number" min="1" max="9" id="c87"></td>
-					<td class="cell rightborder bottomborder"><input type="number" min="1" max="9" id="c88"></td>
+					<td class="cell leftborder bottomborder grayright"><input min="1" max="9" id="c80"></td>
+					<td class="cell bottomborder grayright"><input min="1" max="9" id="c81"></td>
+					<td class="cell bottomborder rightborder"><input min="1" max="9" id="c82"></td>
+					<td class="cell bottomborder grayright"><input min="1" max="9" id="c83"></td>
+					<td class="cell bottomborder grayright"><input min="1" max="9" id="c84"></td>
+					<td class="cell bottomborder rightborder"><input min="1" max="9" id="c85"></td>
+					<td class="cell bottomborder grayright"><input min="1" max="9" id="c86"></td>
+					<td class="cell bottomborder grayright"><input min="1" max="9" id="c87"></td>
+					<td class="cell rightborder bottomborder"><input min="1" max="9" id="c88"></td>
 				</tr>
 			</table>
 			<br>
 			<center>
-				<button type="button" class="btn btn-primary" onclick="main();">Set the Problem</button>
+				<button type="button" class="btn btn-primary" onclick="main();">Solve the Puzzle</button>
+				<button type="button" class="btn btn-primary" value="Refresh" onclick="history.go(0);">Set New Puzzle</button>
+
+				<!-- <button type="button" class="btn btn-primary" onclick="main();">Set the Problem</button> -->
 			</center>
+			
+			<br>
+
+			<p id="hello"></p>
 
 		<script>
-			const _board = [
-				['.', '9', '.', '.', '4', '2', '1', '3', '6'],
-				['.', '.', '.', '9', '6', '.', '4', '8', '5'],
-				['.', '.', '.', '5', '8', '1', '.', '.', '.'],
-				['.', '.', '4', '.', '.', '.', '.', '.', '.'],
-				['5', '1', '7', '2', '.', '.', '9', '.', '.'],
-				['6', '.', '2', '.', '.', '.', '3', '7', '.'],
-				['1', '.', '.', '8', '.', '4', '.', '2', '.'],
-				['7', '.', '6', '.', '.', '.', '8', '1', '.'],
-				['3', '.', '.', '.', '9', '.', '.', '.', '.'],
-			];
+			const screen_board = [['','','','','','','','',''],
+								  ['','','','','','','','',''],
+								  ['','','','','','','','',''],
+								  ['','','','','','','','',''],
+								  ['','','','','','','','',''],
+								  ['','','','','','','','',''],
+								  ['','','','','','','','',''],
+								  ['','','','','','','','',''],
+								  ['','','','','','','','','']];
+
 			function main() {
-				solve_sudoku(_board);
-				console.log(_board);
+				// console.log(checkSudoku());
+				if(checkSudoku()){
+					solve_sudoku(screen_board);
+					console.log(screen_board);
+					document.getElementById("hello").innerHTML = setTable(screen_board);
+				}
+				else {
+					document.getElementById("hello").innerHTML = '<center class="txtoutline"> <h3> <font color="white"> Please set the valid Sudoku Puzzle </font> </h3> </center>' 
+				}
+
+			}
+
+			function setTable(given_board) {
+				// return "<h1> YO BU0YYY! " + a + "</h1>";
+				// var num = 256;
+				// console.log(given_board);
+				// given_board = _board;
+				var flag = 0;
+				var nums = {};
+
+				for(var i=1;i<=9;i++){
+					nums[i] = 1;
+				}
+
+				for(var i=0;i<9;i++) {
+					for(var j=0;j<9;j++) {
+						// console.log(i,j,"->",given_board[i][j]);
+						if(!(given_board[i][j] in nums)) {
+							console.log(given_board[i][j]);
+							flag = 1;
+							break;
+						}
+					}
+				}
+
+				console.log(flag);
+
+				if(flag == 1){
+					return '<center class="txtoutline"> <h3> <font color="white"> Please set the valid Sudoku Puzzle </font> </h3> </center>'
+				}
+				var tab = '<table class="dimtable">	<tr class="graybottom">	<td class="cell leftborder topborder grayright" id="s00">' + '<center> <b> <font size="5">' + given_board[0][0] + '</font> </b> </center>' + '</td>								<td class="cell topborder grayright" id="s01">' + '<center> <b> <font size="5">' + given_board[0][1] + '</font> </b> </center>' + '</td>								<td class="cell topborder rightborder" id="s02">' + '<center> <b> <font size="5">' + given_board[0][2] + '</font> </b> </center>' + '</td>								<td class="cell topborder grayright" id="s03">' + '<center> <b> <font size="5">' + given_board[0][3] + '</font> </b> </center>' + '</td>								<td class="cell topborder grayright" id="s04">' + '<center> <b> <font size="5">' + given_board[0][4] + '</font> </b> </center>' + '</td>								<td class="cell topborder rightborder" id="s05">' + '<center> <b> <font size="5">' + given_board[0][5] + '</font> </b> </center>' + '</td>								<td class="cell topborder grayright" id="s06">' + '<center> <b> <font size="5">' + given_board[0][6] + '</font> </b> </center>' + '</td>								<td class="cell topborder grayright" id="s07">' + '<center> <b> <font size="5">' + given_board[0][7] + '</font> </b> </center>' + '</td>								<td class="cell rightborder topborder" id="s08">' + '<center> <b> <font size="5">' + given_board[0][8] + '</font> </b> </center>' + '</td>							</tr>						<tr class="graybottom">								<td class="cell leftborder grayright" min="1" max="9" id="s10">' + '<center> <b> <font size="5">' + given_board[1][0] + '</font> </b> </center>' + '</td>								<td class="cell grayright" min="1" max="9" id="s11">' + '<center> <b> <font size="5">' + given_board[1][1] + '</font> </b> </center>' + '</td>								<td class="cell rightborder" min="1" max="9" id="s12">' + '<center> <b> <font size="5">' + given_board[1][2] + '</font> </b> </center>' + '</td>								<td class="cell grayright" min="1" max="9" id="s13">' + '<center> <b> <font size="5">' + given_board[1][3] + '</font> </b> </center>' + '</td>								<td class="cell grayright" min="1" max="9" id="s14">' + '<center> <b> <font size="5">' + given_board[1][4] + '</font> </b> </center>' + '</td>								<td class="cell rightborder" min="1" max="9" id="s15">' + '<center> <b> <font size="5">' + given_board[1][5] + '</font> </b> </center>' + '</td>								<td class="cell grayright" min="1" max="9" id="s16">' + '<center> <b> <font size="5">' + given_board[1][6] + '</font> </b> </center>' + '</td>								<td class="cell grayright" min="1" max="9" id="s17">' + '<center> <b> <font size="5">' + given_board[1][7] + '</font> </b> </center>' + '</td>								<td class="cell rightborder" min="1" max="9" id="s18">' + '<center> <b> <font size="5">' + given_board[1][8] + '</font> </b> </center>' + '</td>							</tr>							<tr>								<td class="cell leftborder bottomborder grayright" min="1" max="9" id="s20">' + '<center> <b> <font size="5">' + given_board[2][0] + '</font> </b> </center>' + '</td>								<td class="cell bottomborder grayright" min="1" max="9" id="s21">' + '<center> <b> <font size="5">' + given_board[2][1] + '</font> </b> </center>' + '</td>								<td class="cell bottomborder rightborder" min="1" max="9" id="s22">' + '<center> <b> <font size="5">' + given_board[2][2] + '</font> </b> </center>' + '</td>								<td class="cell bottomborder grayright" min="1" max="9" id="s23">' + '<center> <b> <font size="5">' + given_board[2][3] + '</font> </b> </center>' + '</td>								<td class="cell bottomborder grayright" min="1" max="9" id="s24">' + '<center> <b> <font size="5">' + given_board[2][4] + '</font> </b> </center>' + '</td>								<td class="cell bottomborder rightborder" min="1" max="9" id="s25">' + '<center> <b> <font size="5">' + given_board[2][5] + '</font> </b> </center>' + '</td>								<td class="cell bottomborder grayright" min="1" max="9" id="s26">' + '<center> <b> <font size="5">' + given_board[2][6] + '</font> </b> </center>' + '</td>								<td class="cell bottomborder grayright" min="1" max="9" id="s27">' + '<center> <b> <font size="5">' + given_board[2][7] + '</font> </b> </center>' + '</td>								<td class="cell rightborder bottomborder" min="1" max="9" id="s28">' + '<center> <b> <font size="5">' + given_board[2][8] + '</font> </b> </center>' + '</td>							</tr>							<tr class="graybottom">								<td class="cell leftborder grayright" min="1" max="9" id="s30">' + '<center> <b> <font size="5">' + given_board[3][0] + '</font> </b> </center>' + '</td>								<td class="cell grayright" min="1" max="9" id="s31">' + '<center> <b> <font size="5">' + given_board[3][1] + '</font> </b> </center>' + '</td>								<td class="cell rightborder" min="1" max="9" id="s32">' + '<center> <b> <font size="5">' + given_board[3][2] + '</font> </b> </center>' + '</td>								<td class="cell grayright" min="1" max="9" id="s33">' + '<center> <b> <font size="5">' + given_board[3][3] + '</font> </b> </center>' + '</td>								<td class="cell grayright" min="1" max="9" id="s34">' + '<center> <b> <font size="5">' + given_board[3][4] + '</font> </b> </center>' + '</td>								<td class="cell rightborder" min="1" max="9" id="s35">' + '<center> <b> <font size="5">' + given_board[3][5] + '</font> </b> </center>' + '</td>								<td class="cell grayright" min="1" max="9" id="s36">' + '<center> <b> <font size="5">' + given_board[3][6] + '</font> </b> </center>' + '</td>								<td class="cell grayright" min="1" max="9" id="s37">' + '<center> <b> <font size="5">' + given_board[3][7] + '</font> </b> </center>' + '</td>								<td class="cell rightborder" min="1" max="9" id="s38">' + '<center> <b> <font size="5">' + given_board[3][8] + '</font> </b> </center>' + '</td>							</tr>											<tr class="graybottom">								<td class="cell leftborder grayright" min="1" max="9" id="s40">' + '<center> <b> <font size="5">' + given_board[4][0] + '</font> </b> </center>' + '</td>								<td class="cell grayright" min="1" max="9" id="s41">' + '<center> <b> <font size="5">' + given_board[4][1] + '</font> </b> </center>' + '</td>								<td class="cell rightborder" min="1" max="9" id="s42">' + '<center> <b> <font size="5">' + given_board[4][2] + '</font> </b> </center>' + '</td>								<td class="cell grayright" min="1" max="9" id="s43">' + '<center> <b> <font size="5">' + given_board[4][3] + '</font> </b> </center>' + '</td>								<td class="cell grayright" min="1" max="9" id="s44">' + '<center> <b> <font size="5">' + given_board[4][4] + '</font> </b> </center>' + '</td>								<td class="cell rightborder" min="1" max="9" id="s45">' + '<center> <b> <font size="5">' + given_board[4][5] + '</font> </b> </center>' + '</td>								<td class="cell grayright" min="1" max="9" id="s46">' + '<center> <b> <font size="5">' + given_board[4][6] + '</font> </b> </center>' + '</td>								<td class="cell grayright" min="1" max="9" id="s47">' + '<center> <b> <font size="5">' + given_board[4][7] + '</font> </b> </center>' + '</td>								<td class="cell rightborder" min="1" max="9" id="s48">' + '<center> <b> <font size="5">' + given_board[4][8] + '</font> </b> </center>' + '</td>							</tr>											<tr>								<td class="cell leftborder bottomborder grayright" min="1" max="9" id="s50">' + '<center> <b> <font size="5">' + given_board[5][0] + '</font> </b> </center>' + '</td>								<td class="cell bottomborder grayright" min="1" max="9" id="s51">' + '<center> <b> <font size="5">' + given_board[5][1] + '</font> </b> </center>' + '</td>								<td class="cell bottomborder rightborder" min="1" max="9" id="s52">' + '<center> <b> <font size="5">' + given_board[5][2] + '</font> </b> </center>' + '</td>								<td class="cell bottomborder grayright" min="1" max="9" id="s53">' + '<center> <b> <font size="5">' + given_board[5][3] + '</font> </b> </center>' + '</td>								<td class="cell bottomborder grayright" min="1" max="9" id="s54">' + '<center> <b> <font size="5">' + given_board[5][4] + '</font> </b> </center>' + '</td>								<td class="cell bottomborder rightborder" min="1" max="9" id="s55">' + '<center> <b> <font size="5">' + given_board[5][5] + '</font> </b> </center>' + '</td>								<td class="cell bottomborder grayright" min="1" max="9" id="s56">' + '<center> <b> <font size="5">' + given_board[5][6] + '</font> </b> </center>' + '</td>								<td class="cell bottomborder grayright" min="1" max="9" id="s57">' + '<center> <b> <font size="5">' + given_board[5][7] + '</font> </b> </center>' + '</td>								<td class="cell rightborder bottomborder" min="1" max="9" id="s58">' + '<center> <b> <font size="5">' + given_board[5][8] + '</font> </b> </center>' + '</td>							</tr>							<tr class="graybottom">								<td class="cell leftborder grayright" min="1" max="9" id="s60">' + '<center> <b> <font size="5">' + given_board[6][0] + '</font> </b> </center>' + '</td>								<td class="cell grayright" min="1" max="9" id="s61">' + '<center> <b> <font size="5">' + given_board[6][1] + '</font> </b> </center>' + '</td>								<td class="cell rightborder" min="1" max="9" id="s62">' + '<center> <b> <font size="5">' + given_board[6][2] + '</font> </b> </center>' + '</td>								<td class="cell grayright" min="1" max="9" id="s63">' + '<center> <b> <font size="5">' + given_board[6][3] + '</font> </b> </center>' + '</td>								<td class="cell grayright" min="1" max="9" id="s64">' + '<center> <b> <font size="5">' + given_board[6][4] + '</font> </b> </center>' + '</td>								<td class="cell rightborder" min="1" max="9" id="s65">' + '<center> <b> <font size="5">' + given_board[6][5] + '</font> </b> </center>' + '</td>								<td class="cell grayright" min="1" max="9" id="s66">' + '<center> <b> <font size="5">' + given_board[6][6] + '</font> </b> </center>' + '</td>								<td class="cell grayright" min="1" max="9" id="s67">' + '<center> <b> <font size="5">' + given_board[6][7] + '</font> </b> </center>' + '</td>								<td class="cell rightborder" min="1" max="9" id="s68">' + '<center> <b> <font size="5">' + given_board[6][8] + '</font> </b> </center>' + '</td>							</tr>							<tr class="graybottom">								<td class="cell leftborder grayright" min="1" max="9" id="s70">' + '<center> <b> <font size="5">' + given_board[7][0] + '</font> </b> </center>' + '</td>								<td class="cell grayright" min="1" max="9" id="s71">' + '<center> <b> <font size="5">' + given_board[7][1] + '</font> </b> </center>' + '</td>								<td class="cell rightborder" min="1" max="9" id="s72">' + '<center> <b> <font size="5">' + given_board[7][2] + '</font> </b> </center>' + '</td>								<td class="cell grayright" min="1" max="9" id="s73">' + '<center> <b> <font size="5">' + given_board[7][3] + '</font> </b> </center>' + '</td>								<td class="cell grayright" min="1" max="9" id="s74">' + '<center> <b> <font size="5">' + given_board[7][4] + '</font> </b> </center>' + '</td>								<td class="cell rightborder" min="1" max="9" id="s75">' + '<center> <b> <font size="5">' + given_board[7][5] + '</font> </b> </center>' + '</td>								<td class="cell grayright" min="1" max="9" id="s76">' + '<center> <b> <font size="5">' + given_board[7][6] + '</font> </b> </center>' + '</td>								<td class="cell grayright" min="1" max="9" id="s77">' + '<center> <b> <font size="5">' + given_board[7][7] + '</font> </b> </center>' + '</td>								<td class="cell rightborder" min="1" max="9" id="s78">' + '<center> <b> <font size="5">' + given_board[7][8] + '</font> </b> </center>' + '</td>							</tr>		<tr> <td class="cell leftborder bottomborder grayright" id="s80">' + '<center> <b> <font size="5">' + given_board[8][0] + '</font> </b> </center>' + '</td>								<td class="cell bottomborder grayright" id="s81">' + '<center> <b> <font size="5">' + given_board[8][1] + '</font> </b> </center>' + '</td>								<td class="cell bottomborder rightborder" id="s82">' + '<center> <b> <font size="5">' + given_board[8][2] + '</font> </b> </center>' + '</td>								<td class="cell bottomborder grayright" id="s83">' + '<center> <b> <font size="5">' + given_board[8][3] + '</font> </b> </center>' + '</td>		<td class="cell bottomborder grayright" id="s84">' + '<center> <b> <font size="5">' + given_board[8][4] + '</font> </b> </center>' + '</td>								<td class="cell bottomborder rightborder" id="s85">' + '<center> <b> <font size="5">' + given_board[8][5] + '</font> </b> </center>' + '</td>								<td class="cell bottomborder grayright" id="s86">' + '<center> <b> <font size="5">' + given_board[8][6] + '</font> </b> </center>' + '</td>								<td class="cell bottomborder grayright" id="s87">' + '<center> <b> <font size="5">' + given_board[8][7] + '</font> </b> </center>' + '</td>	<td class="cell rightborder bottomborder" id="s88">' + '<center> <b> <font size="5">' + given_board[8][8] + '</font> </b> </center>' + '</td>							</tr> </table>';
+				return tab;
+			}
+
+			function checkElements(given_board) {
+				
+			}
+
+			function checkSudoku() {
+				// console.log(screen_board);
+				getSudoku();
+				// console.log(screen_board);
+				for(var i=0;i<9;i++) {
+					for(var j=0;j<9;j++) {
+						if(screen_board[i][j] != '') {
+							return true;
+						}
+					}
+				}
+				return false;
+			}
+
+			function getSudoku() {
+				for(var i=0;i<9;i++) {
+					for(var j=0;j<9;j++) {
+						screen_board[i][j] = document.getElementById('c'+i.toString()+j.toString()).value;
+					}
+				}
 			}
 
 			function checkValid(board, row, col, k) {
@@ -207,9 +307,9 @@
 
 
 			function solve_sudoku(data) {
-				for (let i = 0; i < 9; i++) {
+				for (let i = 0; i < 9; i++) {	
 					for (let j = 0; j < 9; j++) {
-						if (data[i][j] == '.') {
+						if (data[i][j] == '') {
 							for (let k = 1; k <= 9; k++) {
 								if (checkValid(data, i, j, k)) {
 									data[i][j] = k.toString();
@@ -217,7 +317,7 @@
 										return true;
 									} 
 									else {
-										data[i][j] = '.';
+										data[i][j] = '';
 									}
 								}
 						}
@@ -227,6 +327,45 @@
 				}
 				return true;
 			}
+
+
+			$('table.arrow-nav').keydown(function(e){
+				var $table = $(this);
+				var $active = $('input:focus,select:focus',$table);
+				var $next = null;
+				var focusableQuery = 'input:visible,select:visible,textarea:visible';
+				var position = parseInt( $active.closest('td').index()) + 1;
+				console.log('position :',position);
+				switch(e.keyCode){
+					case 37: // <Left>
+						$next = $active.parent('td').prev().find(focusableQuery);   
+						break;
+					case 38: // <Up>                    
+						$next = $active
+							.closest('tr')
+							.prev()                
+							.find('td:nth-child(' + position + ')')
+							.find(focusableQuery)
+						;
+						
+						break;
+					case 39: // <Right>
+						$next = $active.closest('td').next().find(focusableQuery);            
+						break;
+					case 40: // <Down>
+						$next = $active
+							.closest('tr')
+							.next()                
+							.find('td:nth-child(' + position + ')')
+							.find(focusableQuery)
+						;
+						break;
+				}       
+				if($next && $next.length)
+				{        
+					$next.focus();
+				}
+			});
 		</script>
 
 		</form>
